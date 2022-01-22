@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>My Favorite Season</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.pixabay.com/photo/2020/12/08/22/00/snowman-5815700_960_720.png">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+    <style>  
+      * {
+        box-sizing: border-box;
+      }
+      .column {
+        float: left;
+        width: 50%;
+        padding: 50px;
+        text-align: center;
+        font-size: 65px;
+        cursor: pointer;
+        color: white;
+      }
+      
+      .containerTab {
+        padding: 40px;
+        color: white;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Closable button inside the image */
+      .closebtn {
+        float: right;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body style="background-image: url('https://cdn.pixabay.com/photo/2021/11/30/17/06/tree-6835828__480.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+    <h1 style="color:black; text-align:center; font-size:600%;"><b>What is My Favorite Season?</b></h1>
+
+    
+    <div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:red;"><b>Winter!!!</b></div>
+    <div class="column" onclick="openTab('b2');" style="background:blue;"><b>What is Winter???</b></div>
+    </div>
+
+    <div id="b1" class="containerTab" style="display:none;background:red">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+      <p style="font-size: 50px">Why?</p>
+      <p style="font-size: 30px">Well, we all love snow and building snowmen!! And tackling them!!!</p>
+      <p style="font-size: 30px"><i>There's also Christmas, drinking hot cocoa, making snow angels, eating candy canes, and much much more!</i></p>
+    </div>
+
+    <div id="b2" class="containerTab" style="display:none;background:blue">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+      <p style="font-size: 35px"><b><i>The coldest season of the year, in the northern hemisphere from December to February and in the southern hemisphere from June to August</i></b></p>
+      <p style="font-size: 50px">What is Snow???</p>
+      <p style="font-size: 30px">Atmospheric water vapor frozen into ice crystals and falling in light white flakes or lying on the ground as a white layer</p>
+    </div>
+
+    <script>
+      function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+    </script>
+
+    <u><b><a href="./index.html" style="font-size: 300%; float: right; color: lime; background: black">Home Page</a></b></u>
+  </body>
+</html>
