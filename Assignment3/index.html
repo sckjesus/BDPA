@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All About Me</title>
+    <link rel="icon" type="image/x-icon" href="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/92edaa75-a517-4997-b663-c9069d28f748/faces.png">
+    <style>
+      .headin{
+        color:lime; 
+        text-align:center;
+        font-size:700%;
+      }  
+      .noheadin{
+        color:lime; 
+        font-size:185%;
+      } 
+      @media screen and (max-width: 663px) {
+        .headin{
+          font-size:500%;
+        }
+      }
+      @media screen and (max-width: 660px) {
+        .noheadin{
+          font-size:175%;
+        }
+      }
+    </style>  
+  </head>
+  <body style="background-image: url('https://i.ytimg.com/vi/mb9i9YnMFS4/maxresdefault.jpg'); background-attachment:fixed; background-position: center; background-repeat: no-repeat; background-size: 100%;">
+    <h1 class="headin"><b>All About Me</b></h1>
+    <!-- <ul style="color:lime; font-size:200%;"><b> -->
+    <ul class="noheadin"><b>
+        <li><a href="./sport.html" class="noheadin">My Favorite Sport</a></li>
+        <li><a href="./season.html" class="noheadin">My Favorite Season</a></li>
+        <li><a href="./subject.html" class="noheadin">My Favorite Subject</a></li>
+
+    <h5 style="color: black; text-align: right">Search Google for no apparent reason...</h5>
+
+    <form role="search" id="form" style="text-align:right;">
+      <input type="search" id="query" name="query" placeholder="Search Google...">
+    </form>
+    <script>
+      const f = document.getElementById('form');
+      const q = document.getElementById('query');
+      const google = 'https://www.google.com/search?q=';
+
+      function submitted(event) {
+        event.preventDefault();
+        const url = google +q.value;
+        const win = window.open(url, '_blank');
+        win.focus();
+      }
+
+      f.addEventListener('submit', submitted);
+    </script>
+  </body>
+</html>

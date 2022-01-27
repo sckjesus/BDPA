@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All About Me</title>
+    <link rel="icon" type="image/x-icon" href="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/92edaa75-a517-4997-b663-c9069d28f748/faces.png">
+    <link rel="stylesheet" href="css.css">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+
+      .search-container:hover{
+        animation: hoverShake 0.15s linear 3;
+      }
+      @media screen and (max-width: 663px) {
+        .headinin{
+          font-size:500%;
+        }
+      }
+      @media screen and (max-width: 660px) {
+        .noheadinin{
+          font-size:175%;
+        }
+      }
+    </style>  
+  </head>
+  <body  class="background" style="background-image: url('https://i.ytimg.com/vi/mb9i9YnMFS4/maxresdefault.jpg');">
+    <h1 class="headinin"><b>All About Me</b></h1>
+    <ul class="noheadinin"><b>
+        <li><a href="./sport.html" class="noheadinin">My Favorite Sport</a></li>
+        <li><a href="./season.html" class="noheadinin">My Favorite Season</a></li>
+        <li><a href="./subject.html" class="noheadinin">My Favorite Subject</a></li>
+
+    <h5 style="color: black; text-align: right; font-size: 100%"><b>Search Google for no apparent reason at all...</b></h5>
+
+    <form class="form-outline" role="search" id="form" style="text-align:right; border: 75px solid pink; float:right; border-radius: 100px;">
+      <input type="search" id="query" name="query" placeholder="Search Google...">
+    </form>
+
+
+    <script>
+      const f = document.getElementById('form');
+      const query = document.getElementById('query');
+      const google = 'https://www.google.com/search?q=';
+      const site = '';
+
+      function submitted(event) {
+        event.preventDefault();
+        const url = google + site + '+' + query.value;
+        const win = window.open(url, '_blank');
+        win.focus();
+      }
+
+      f.addEventListener('submit', submitted);
+    </script>
+  </body>
+</html>
