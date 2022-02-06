@@ -1,0 +1,237 @@
+<html>
+  <head>
+    <title>My Favorite Season</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.pixabay.com/photo/2020/12/08/22/00/snowman-5815700_960_720.png">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>        
+      @media screen and (max-width: 1265px) {
+        .columnsea {
+          height: 33%;
+        }
+      }  
+      @media screen and (max-width: 950px) {
+        .columnsea {
+          width: 100%;
+          height:200px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .headinsea{
+          font-size:425%;
+        }
+      }
+    .show-read-more .more-text{
+      display: none;
+    }
+    .show-read-morech .more-text{
+      display: none;
+    }
+    .show-read-moreta .more-text{
+      display: none;
+    }
+
+  
+    </style>
+    <script>
+      $(document).ready(function(){
+        $(".show-read-more").each(function(){
+          var myStr = $(this).text();
+          if($.trim(myStr).length > 0){
+            var newStr = myStr.substring(0, 0);
+            var removedStr = myStr.substring(0, $.trim(myStr).length);
+            $(this).empty().html(newStr);
+            $(this).append(' <a href="javascript:void(0);" class="read-more" style="color:silver">Read More About Snow...</a>');
+            $(this).append('<span class="more-text ">' + removedStr + '</span>');
+          }
+        });
+        $(".read-more").click(function(){
+          $(this).siblings(".more-text").contents().unwrap();
+          $(this).remove();
+        });
+      });
+      $(document).ready(function(){
+        $(".show-read-morech").each(function(){
+          var myStr = $(this).text();
+          if($.trim(myStr).length > 0){
+            var newStr = myStr.substring(0, 0);
+            var removedStr = myStr.substring(0, $.trim(myStr).length);
+            $(this).empty().html(newStr);
+            $(this).append(' <a href="javascript:void(0);" class="read-more" style="color:silver">閱讀更多關於雪...</a>');
+            $(this).append('<span class="more-text ">' + removedStr + '</span>');
+          }
+        });
+        $(".read-more").click(function(){
+          $(this).siblings(".more-text").contents().unwrap();
+          $(this).remove();
+        });
+      });
+      $(document).ready(function(){
+        $(".show-read-moreta").each(function(){
+          var myStr = $(this).text();
+          if($.trim(myStr).length > 0){
+            var newStr = myStr.substring(0, 0);
+            var removedStr = myStr.substring(0, $.trim(myStr).length);
+            $(this).empty().html(newStr);
+            $(this).append(' <a href="javascript:void(0);" class="read-more" style="color:silver">பனி பற்றி மேலும் வாசிக்க...</a>');
+            $(this).append('<span class="more-text ">' + removedStr + '</span>');
+          }
+        });
+        $(".read-more").click(function(){
+          $(this).siblings(".more-text").contents().unwrap();
+          $(this).remove();
+        });
+      });
+    </script>
+  </head>
+  <body style="background-image: url('https://cdn.pixabay.com/photo/2021/11/30/17/06/tree-6835828__480.jpg');" class="backgroundsea">
+    <form style="float:right; font-size:35px;">
+      <label for="lang-switch">
+          <span lang="ch">语</span>
+          <span lang="en">Language</span>
+          <span lang="ta">மொழி</span>
+      </label>
+      <select id="lang-switch">
+          <option value="en" selected>English</option>
+          <option value="ch">Chinese</option>
+          <option value="ta">Tamil</option>
+      </select>
+    </form>
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+    <span lang="en">
+      <h1 class="headinsea"><b>What is My Favorite Season?</b></h1>
+      
+      
+      <div class="row">
+      <div class="columnsea" onclick="openTab('b1');" style="background:red;"><b>Winter!!!</b></div>
+      <div class="columnsea" onclick="openTab('b2');" style="background:blue;"><b>Winter???</b></div>
+      </div>
+
+      <div id="b1" class="containerTab" style="display:none;background:red">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <p style="font-size: 50px">Why?</p>
+        <p style="font-size: 30px">Well, we all love snow and building snowmen!! And tackling them!!!</p>
+        <p style="font-size: 30px"><i>There's also Christmas, drinking hot cocoa, making snow angels, eating candy canes, and much much more!</i></p>
+      </div>
+
+      <div id="b2" class="containerTab" style="display:none;background:blue">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <p style="font-size: 35px"><b><i>The coldest season of the year, in the northern hemisphere from December to February and in the southern hemisphere from June to August</i></b></p>
+        <p class="show-read-more" style="font-size: 50px" >What is Snow???  Snow is atmospheric water vapor frozen into ice crystals and falling in light white flakes or lying on the ground as a white layer</p>
+      </div>
+
+      <script>
+        function openTab(tabName) {
+          var i, x;
+          x = document.getElementsByClassName("containerTab");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(tabName).style.display = "block";
+        }
+      </script>
+
+      <u><b><a href="./index.html" style="font-size: 300%; float: right; color: lime; background: black">Home Page</a></b></u>
+    </span>
+    <!---------------------------------------------------------------------------------------------------------------------------------->
+    <span lang="ta">
+      <h1 class="headinsea"><b>எனக்கு பிடித்த சீசன் எது?</b></h1>
+      
+      
+      <div class="row">
+      <div class="columnsea" onclick="openTab('b5');" style="background:red;"><b>குளிர்காலம்!!!</b></div>
+      <div class="columnsea" onclick="openTab('b6');" style="background:blue;"><b>குளிர்காலம்???</b></div>
+      </div>
+
+      <div id="b5" class="containerTab" style="display:none;background:red">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <p style="font-size: 50px">ஏன்?</p>
+        <p style="font-size: 30px">சரி, நாம் அனைவரும் பனி மற்றும் பனிமனிதர்களை உருவாக்க விரும்புகிறோம் !! மற்றும் அவர்களை சமாளிப்பது !!!</p>
+        <p style="font-size: 30px"><i>கிறிஸ்மஸ், சூடான கோகோ குடிப்பது, பனி தேவதைகளை உருவாக்குவது, சாக்லேட் கேன்கள் சாப்பிடுவது மற்றும் பல!</i></p>
+      </div>
+
+      <div id="b6" class="containerTab" style="display:none;background:blue">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <p style="font-size: 35px"><b><i>ஆண்டின் மிகவும் குளிரான பருவம், வட அரைக்கோளத்தில் டிசம்பர் முதல் பிப்ரவரி வரையிலும், தெற்கு அரைக்கோளத்தில் ஜூன் முதல் ஆகஸ்ட் வரையிலும்</i></b></p>
+        <p class="show-read-moreta" style="font-size: 50px" >பனி என்றால் என்ன??? பனி என்பது வளிமண்டல நீர் நீராவி பனி படிகங்களாக உறைந்து வெளிர் வெள்ளை செதில்களாக விழுவது அல்லது ஒரு வெள்ளை அடுக்காக தரையில் கிடக்கிறது</p>
+      </div>
+
+      <script>
+        function openTab(tabName) {
+          var i, x;
+          x = document.getElementsByClassName("containerTab");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(tabName).style.display = "block";
+        }
+      </script>
+
+      <u><b><a href="./index.html" style="font-size: 300%; float: right; color: lime; background: black">முகப்பு பக்கம்</a></b></u>
+    </span>
+<!-------------------------------------------------------------------------------------------------------------------------->
+    <span lang="ch">
+      <h1 class="headinsea"><b>我最喜歡的季節是什麼？</b></h1>
+      
+      
+      <div class="row">
+      <div class="columnsea" onclick="openTab('b3');" style="background:red;"><b>冬天！！！</b></div>
+      <div class="columnsea" onclick="openTab('b4');" style="background:blue;"><b>什麼是冬天？？？</b></div>
+      </div>
+
+      <div id="b3" class="containerTab" style="display:none;background:red">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <p style="font-size: 50px">為什麼？</p>
+        <p style="font-size: 30px">好吧，我們都喜歡雪和堆雪人！ 並對付他們！！！</p>
+        <p style="font-size: 30px"><i>還有聖誕節，喝熱可可，做雪天使，吃拐杖糖等等！</i></p>
+      </div>
+
+      <div id="b4" class="containerTab" style="display:none;background:blue">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <p style="font-size: 35px"><b><i>一年中最冷的季節，北半球從十二月到二月，南半球從六月到八月</i></b></p>
+        <p class="show-read-morech" style="font-size: 50px">什麼是雪???  雪是大氣中的水蒸氣凍結成冰晶並以淺白色片狀落下或以白色層的形式躺在地面上</p>
+      </div>
+
+      <script>
+        function openTab(tabName) {
+          var i, x;
+          x = document.getElementsByClassName("containerTab");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(tabName).style.display = "block";
+        }
+      </script>
+
+      <u><b><a href="./index.html" style="font-size: 300%; float: right; color: lime; background: black">主页</a></b></u>
+    </span>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+    $('[lang]').hide(); // hide all lang attributes on start.
+    $('[lang="en"]').show(); // show just Korean text (you can change it)
+    $('#lang-switch').change(function () { // put onchange event when user select option from select
+        var lang = $(this).val(); // decide which language to display using switch case. The rest is obvious (i think)
+        switch (lang) {
+            case 'en':
+                $('[lang]').hide();
+                $('[lang="en"]').show();
+            break;
+            case 'ch':
+                $('[lang]').hide();
+                $('[lang="ch"]').show();
+            break;
+            case 'ta':
+                $('[lang]').hide();
+                $('[lang="ta"]').show();
+            break;
+            default:
+                $('[lang]').hide();
+                $('[lang="ch"]').show();
+            }
+    });
+    </script>
+  </body>
+</html>
