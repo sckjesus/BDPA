@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css.css">    
+    <link rel="icon" type="image/x-icon" href="https://www.pngkit.com/png/detail/10-102888_numbers-vector-jumbled-prime-numbers-clipart.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+      @media screen and (max-width: 585px) {
+        .circe{
+          font-size:400%;
+        }
+      }
+    </style>
+    <title>Prime Numbers!!!</title>
+  </head>
+  <body style="background-color: white; background-image: url('https://www.theschoolrun.com/sites/theschoolrun.com/files/article_images/prime_numbers.png');" class="background">
+    <p class="circe" style="background:white; float:center"><b>Prime Numbers!!!</b></p>
+    <a href="./indexhome.html"><p style="text-align: right; font-size: 300%; color:lime; background:white"><u><b>More Tools...</b></u></p></a>
+    <a href="./index.html"><p style="text-align: right; font-size: 300%; color:lime; background:white"><u><b>Home Page</b></u></p></a>
+    <a href="./prime_numbers.html"><button type="button" style="text-align: center; float: right; font-size: 400%; color:black; background:lime; border-color:green; cursor: pointer;"><u><b>Calculate Again</b></u></button></a>
+    <script>
+      find_it();
+      function find_it(){
+        numfromuser = prompt("Welcome! To find if your number is prime, Enter your number here!: ");
+        if (Number.isInteger(numfromuser*1)){
+          for (i=2; i<numfromuser; i=i+1){
+            if (numfromuser%i==0){
+              alert("The number you entered is not prime, it is a composite number!");
+              break;
+            }else{
+              reali=i+1;
+              if (reali==numfromuser){
+                alert("The number you entered is prime!");
+              }else if(numfromuser%i!==0) continue;
+            }
+          }
+        }else{
+          alert("The input received is not a integer. You typed '"+numfromuser+"', Please try again: ");
+        }
+      }
+    </script>
+  </body>
+</html>

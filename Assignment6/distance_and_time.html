@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css.css">    
+    <link rel="icon" type="image/x-icon" href="https://cdn.impactinit.com/cdn/x/x@fa1b03b319/https://s52.impactinit.com/smsimg30//pv/isignstockcontributors/iss_18358_04052.jpg">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+      @media screen and (max-width: 700px) {
+        .circe{
+          font-size:400%;
+        }
+      }
+    </style>
+    <title>How Long Will Your Ride Take?!!</title>
+  </head>
+  <body style="background-color: black; background-image: url('https://images4.alphacoders.com/239/thumb-1920-239674.jpg');" class="background">
+    <p class="circe" style="background:black; float:center"><b>How Long Will Your Ride Take?!!</b></p>
+    <a href="./indexhome.html"><p style="text-align: right; font-size: 300%; color:lime; background:black"><u><b>More Tools...</b></u></p></a>
+    <a href="./index.html"><p style="text-align: right; font-size: 300%; color:lime; background:black"><u><b>Home Page</b></u></p></a>
+    <a href="./distance_and_time.html"><button type="button" style="text-align: center; float: right; font-size: 400%; color:black; background:lime; border-color:green; cursor: pointer;"><u><b>Calculate Again</b></u></button></a>
+    <script>
+      find_it_speed();
+      function find_it_speed(){
+        speed = prompt("Welcome! To Find the amount of time your ride will take, Enter the speed(MPH) you're going right here!(ex: If you're going 60 MPH, type 60): ");
+        if (Number.isInteger(speed*1)){
+          find_it_distance(speed);
+        }else{
+          alert("The input received is not a integer. You typed '"+speed+"', Please try again: ");
+        }
+      }
+      function find_it_distance(spede){
+        distance = prompt("Hello again! To find the amount of time your ride will take, Enter the distance(miles) you're traveling right here!(ex: If you're going 700 miles, type 700): ");
+        if (Number.isInteger(distance*1)){
+          time = distance/spede;
+          if (time>=1){
+            alert("Your ride will be about " + time + " hours long!");
+          }else{
+            timetime = time*60
+            alert("Your ride will be about " + timetime + " minutes long!");
+          }
+        }else{
+          alert("The input received is not a integer. You typed '"+distance+"', Please try again: ");
+        }
+      }
+    </script>
+  </body>
+</html>

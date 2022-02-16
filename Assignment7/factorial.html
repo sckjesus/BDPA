@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css.css">    
+    <link rel="icon" type="image/x-icon" href="https://img.search.brave.com/bmgjtvz1EuRDsuvM6Wkf57RWZJ2ZHGnm2RVFYuMR5RU/rs:fit:600:400:1/g:ce/aHR0cHM6Ly93d3cu/bWF0aGRvdWJ0cy5j/b20vY2ltZ3MvZmFj/dG9yaWFsL2ltYWdl/LnBuZw">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+      @media screen and (max-width: 585px) {
+        .circe{
+          font-size:400%;
+        }
+      }
+    </style>
+    <title>Factorials!!!</title>
+  </head>
+  <body style="background-color: black; background-image: url('https://media.istockphoto.com/vectors/exclamation-mark-red-neon-light-on-black-wall-vector-id1143250174?k=20&m=1143250174&s=612x612&w=0&h=YyZ9b5ZM9NYA6lKg5z5iVm2X-AxoVhlsxsDOv32GnLI=');" class="background">
+    <p class="circe" style="background:black; float:center"><b>Factorials!!!</b></p>
+    <a href="./indexhome.html"><p style="text-align: right; font-size: 300%; color:lime; background:black"><u><b>More Tools...</b></u></p></a>
+    <a href="./index.html"><p style="text-align: right; font-size: 300%; color:lime; background:black"><u><b>Home Page</b></u></p></a>
+    <a href="./factorial.html"><button type="button" style="text-align: center; float: right; font-size: 400%; color:black; background:lime; border-color:green; cursor: pointer;"><u><b>Calculate Again</b></u></button></a>
+    <script>
+      function nope(str) {
+        return (!str || str.length === 0 || /^\s*$/.test(str))
+      }
+    </script>
+    <script>
+      find_it();
+      function find_it(){
+        numberfromuser = prompt("Welcome! To find the factorial, Enter your number here!: ");
+        factorial=1;
+        numb=numberfromuser;
+        if(nope(numberfromuser)){
+          alert("The input received is not a integer. You typed a space, Please try again: ")
+        }else if (Number.isInteger(numberfromuser*1)){
+          while (numb>0){
+            factorial=factorial*numb;
+            numb=numb-1;
+          }
+          alert("The factorial of "+numberfromuser+" is "+factorial);
+        }else{
+          alert("The input received is not a integer. You typed '"+numberfromuser+"', Please try again: ");
+        }
+      }
+    </script>
+  </body>
+</html>
