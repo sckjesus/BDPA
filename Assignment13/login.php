@@ -30,3 +30,4 @@ if ($_POST['key3'] && $_POST['key4']){
     $messagehelper = new Messageshelper();
     $messagehelper->update_message($connection, $_POST['key3'], $_POST['key4']);
 };
+?>
